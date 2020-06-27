@@ -1,0 +1,29 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+.nav-logo {
+  width: 8rem;
+}
+
+.nav-links {
+  display: inline-flex;
+  width: 55%;
+  height: 5rem;
+  line-height: 5rem;
+  padding-top: 2rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.link-project {
+  margin-right: 3rem;
+}
+
+.link-project:hover,
+.link-contact:hover {
+  color: var(--clr-accent);
+}

@@ -2,6 +2,8 @@ import React from 'react'
 import { Project } from '../../data/Projects/Projects';
 import { Link } from 'react-router-dom';
 
+import './ProjectCard.css';
+
 const ProjectCard: React.FC<Project> = (project: Project) => {
   return <div className="project">
     <Link to={project.link}>

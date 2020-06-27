@@ -3,6 +3,8 @@ import Intro from '../../components/Intro/Intro';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import { projects } from '../../data/Projects/Projects';
 
+import './Main.css';
+
 const Main: React.FC = () => {
   return (
     <div className="main">

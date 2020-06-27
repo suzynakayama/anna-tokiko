@@ -10,7 +10,7 @@ import './App.css';
 
 const App: React.FC = () => {
   return (
-    <div>
+    <div className="app">
       <NavBar />
       <Switch>
         <Route exact path='/' component={Main} />

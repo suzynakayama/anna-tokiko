@@ -1,16 +1,3 @@
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
-  font-size: 62.5%;
-}
-
 :root {
   --ff-primary: "Arial", "Roboto", sans-serif;
 	--ff-secondary: "Roboto", sans-serif;
@@ -33,8 +20,36 @@ html {
 		0.125em 0.125em 0.25em rgba(187, 187, 187, 0.65);
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+	font-size: 62.5%;
+	font-family: var(--ff-primary);
+	width: 100vw;
+}
+
+html,
+body,
+#root,
+.app {
+	height: 100vh;
+}
+
 #root {
-	margin: 0 2rem;
+	margin: 0 5rem;
+	font-size: var(--fs-body);
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
 }
 
 @media (min-width: 391px) {
