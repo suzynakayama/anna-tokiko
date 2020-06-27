@@ -1,5 +1,5 @@
 import React from 'react'
-import { Project } from '../../../data/Projects/Projects';
+import { Project } from '../../data/Projects/Projects';
 import { Link } from 'react-router-dom';
 
 const ProjectCard: React.FC<Project> = (project: Project) => {

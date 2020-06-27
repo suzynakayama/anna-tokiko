@@ -6,6 +6,8 @@ import Footer from './components/Footer/Footer';
 import Contact from './pages/Contact/Contact';
 // ! import OneProject
 
+import './App.css';
+
 const App: React.FC = () => {
   return (
     <div>

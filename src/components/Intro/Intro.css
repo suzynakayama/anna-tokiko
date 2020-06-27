@@ -1,0 +1,13 @@
+.intro {
+  width: 100%;
+  height: 45%;
+  background-color: lightpink;
+}
+
+.intro-title {
+  font-size: var(--fs-h1);
+}
+
+.intro-text {
+  font-size: var(--fs-body);
+}
