@@ -7,31 +7,31 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-  title: "string",
+  title: "Sou.L",
   image: "string",
   description: "string",
   link: "string"
   },
   {
-  title: "string",
+  title: "Cosmos",
   image: "string",
   description: "string",
   link: "string"
   },
   {
-  title: "string",
+  title: "Visual Merchandising",
   image: "string",
   description: "string",
   link: "string"
   },
   {
-  title: "string",
+  title: "Marketing Digital",
   image: "string",
   description: "string",
   link: "string"
   },
   {
-  title: "string",
+  title: "Assessoria de Imprensa",
   image: "string",
   description: "string",
   link: "string"
