@@ -37,9 +37,7 @@ if (process.env.NODE_EN !== "production") {
   })
 };
 
-const LOGIN = process.env.LOGIN
-
-app.use(LOGIN, require("./routes/api/users"));
+app.use('api/anna-tokiko-login', require("./routes/api/users"));
 app.use('api/projects', require('./routes/api/projects'));
 
 const PORT = process.env.PORT || 3005;

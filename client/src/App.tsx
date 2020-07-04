@@ -4,6 +4,8 @@ import Main from './pages/Main/Main';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 import Contact from './pages/Contact/Contact';
+import Login from './pages/Login/Login';
+// import NewProject from './pages/NewProject/NewProject';
 // ! import OneProject
 
 import './App.css';
@@ -13,9 +15,11 @@ const App: React.FC = () => {
     <div className="app">
       <NavBar />
       <Switch>
-        <Route exact path='/' component={Main} />
+        <Route exact path="/" component={Main} />
         {/* <Route exact path='/:id' render={props => (<OneProject {...props})} /> */}
-        <Route exact path='/contact' component={Contact} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/annatokiko-login" component={Login} />
+        {/* <Route exact path="/annatokiko-login/new" component={NewProject} /> */}
       </Switch>
       <Footer />
     </div>
