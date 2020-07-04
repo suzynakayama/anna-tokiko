@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
-const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const session = require("express-session");
+const passport = require("passport");
 const path = require('path');
 const favicon = require('serve-favicon');
 
@@ -8,10 +10,21 @@ const app = express();
 
 require("dotenv").config();
 require("./config/database");
+require("./config/passport");
 
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: true
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 
 
 if (process.env.NODE_EN !== "production") {
@@ -24,7 +37,9 @@ if (process.env.NODE_EN !== "production") {
   })
 };
 
-app.use('api/users', require('./routes/api/users'));
+const LOGIN = process.env.LOGIN
+
+app.use(LOGIN, require("./routes/api/users"));
 app.use('api/projects', require('./routes/api/projects'));
 
 const PORT = process.env.PORT || 3005;
