@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NewProject: React.FC = () => {
+const NewProject = () => {
   return
     <div>
       FORM TO ADD PROJECTS

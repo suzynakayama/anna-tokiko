@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const passport = require("passport");
 
+console.log('router')
 // router.get("/api/projects", (req, res) => {
 //   if (req.isAuthenticated()) {
 //     res.redirect("/");
