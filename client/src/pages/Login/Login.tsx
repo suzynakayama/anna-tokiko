@@ -12,8 +12,9 @@ const Login: React.FC <Login>= ({setCurrentUser}) => {
   ) => {
     evt.preventDefault();
     try {
-      let res = await fetch("/api/users/auth/google");
-      console.log(res);
+      let res = await fetch("http://localhost:3005/api/users/auth/google");
+      let response = await res.text();
+      console.log(JSON.stringify(response))
       // setCurrentUser(user);
     } catch (err) {
       console.log(err);
@@ -25,7 +26,8 @@ const Login: React.FC <Login>= ({setCurrentUser}) => {
     <>
       <h1>Login</h1>
       {error && <h1>{error}</h1>}
-      <button onClick={handleClick}>
+      {/* <button onClick={handleClick}> */}
+      <a href="http://localhost:3005/api/users/auth/google" target="_blank">
         <div>
           <span className="ggl-span">
             <svg
@@ -56,7 +58,8 @@ const Login: React.FC <Login>= ({setCurrentUser}) => {
           </span>
           <span className="ggl-label">Sign in with Google</span>
         </div>
-      </button>
+      </a>
+      {/* </button> */}
     </>
   );
 }
